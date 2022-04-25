@@ -38,7 +38,7 @@ session_start();
 		<div class="box">   
 		<input type="text" name="search" class="src" placeholder="Buscar..." autocomplete="off">
 		</div>
-		<h2>Linkowo</h2>		
+		<h2>Innowo</h2>		
 	</nav>
 		<section id="contenido">
 		<article>

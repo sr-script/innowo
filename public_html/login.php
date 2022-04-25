@@ -3,7 +3,7 @@
 session_start();
 
   if (isset($_SESSION['user_id'])) {
-    header('Location: /Innowo');
+    header('Location: /innowo');
   }
 
   require 'database.php';
@@ -25,7 +25,7 @@ session_start();
   }
 
 ?>
-
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,11 +34,12 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+   -->
 	<?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
     <?php endif; ?>
     
-	<div id="login">
+<!--	<div id="login">
 	<h1>Inicio de Sesión</h1>
 
 	<form action="login.php" method="post">
@@ -51,3 +52,4 @@ session_start();
 </div>
 </body>
 </html>
+  -->
