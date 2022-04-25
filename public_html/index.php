@@ -21,8 +21,8 @@
 			Cerrar Sesión
 		</a>
 	<?php else: ?>
-		<header>
-			<h1>Bienvenido a Un mundo de Maravillas</h1>
+		<header id="a">
+			<h1>INNOWO</h1>
 		</header>
 		<nav >
 			

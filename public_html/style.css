@@ -7,7 +7,7 @@ body{
     min-height: 100vh;
 }
 footer{
-    background-color: aqua;
+    background-color: hsla(240, 5%, 63%, 0.466);
     margin-top: auto;
 }
 *{
@@ -15,7 +15,7 @@ footer{
     padding: 0px;
 }
 nav{
-    background-color: aquamarine;
+	background-color: rgb(19, 19, 78);
 	font-size: 16px;
 	line-height: 16px;
 	display: block;
@@ -24,6 +24,7 @@ nav{
 	color: #BBBBBB;
 
 }
+
 .btn-bonitos{
 	background-color: #5E7DE3;
 	padding: 0 20px;
@@ -63,7 +64,7 @@ nav{
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	
+	color: rgb(0, 0, 0);
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -336,8 +337,17 @@ header{
 	color: #fff;
 }
 #cola{
-	color: #000;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 	float: right;
 	margin-right: 25px;
+}
+body{
+	background-color: #333336;
+}
+body{
+	color: white;
+}
+#a{
+	text-align: center;
 }
