@@ -10,6 +10,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+	</style>
 </head>
 <body class="container-X-Small">
 
@@ -22,25 +25,41 @@
 		</a>
 	<?php else: ?>
 		<header id="a">
-			<h1>INNOWO</h1>
-		</header>
-		<nav >
-			
-			
+			<img id="logowo" src="/public_html/images/zzzz/logoiinowo.svg" width="90px" alt="">
+			<h1 id="innowo">INNOWO</h1>
 			<button class="btn-bonitos" id="btn-abrir-popup" class="btn-abrir-popup" href="loging.php">Inicia sesión</button>
 			<button class="btn-bonitos" id="btn-abrir-popupss" class="btn-abrir-popupss" href="singup.php">Registrate</button>
 			<!--
 			 <a href="#">Inicia sesión</a>
 			<a href="signup.php">Registrate</a>
 			-->
+			<img src="/public_html/images/zzzz/angle-down-solid.svg" alt="" width="30px">
+		</header>
+		<nav>
+			<ul>
+				<li><img class="submenunav" src="/public_html//images/zzzz/shirt-solid.svg" alt=""><a class="submenu" href="#">Merch</a></li>
+				<li><img class="submenunav" src="/public_html//images/zzzz/radio.png" alt=""><a class="submenu" href="#">Radio</a></li>
+				<li><img class="submenunav" src="/public_html//images/zzzz/youtube-brands.svg" alt=""><a class="submenu" href="#">Youtube</a></li>
+				<li><img class="submenunav" src="/public_html//images/zzzz/newspaper-solid.svg" alt=""><a class="submenu" href="#">Releases</a></li>
+				<li><img class="submenunav" src="/public_html//images/zzzz/qrcode-solid.svg" alt=""><a class="submenu" href="#">Generar QR</a></li>
+			</ul>
 		</nav>
 		<section>
-			<article>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum in nulla hic vero, fuga quaerat deleniti, iste nemo dolorum ex quas, enim sapiente.
+			<article class="fondo-degra">
+				InnOwO es una red social única la cual ofrece múltiples herramientas para todo el publico desde ayudas para estudiantes como un generador de fotografiaras por códigos QR, entrega a domicilio ofrecida por nuestra propia pagina, un innovador sistema de personalización de perfil con las “pizarras”, también nos promocionamos en la radio local y en nuestra pagina de Youtube y dentro de InnOwO brindamos asesorías generales en temas vanguardistas.
 			</article>
-			<article>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ducimus praesentium fuga magnam est repellat. Voluptatibus voluptates repudiandae atque hic veritatis, molestiae nisi earum quidem. Incidunt repellendus quae quod iure, laborum inventore! Iure dolorem exercitationem repudiandae sit unde tenetur assumenda deserunt magni dolore.
+			<article class="fondo-degra">
+				<h1>¿QUÉ SON LAS PIZARRAS?</h1>
+				La pizarra es nuestra forma personalizar nuestro perfil o el de nuestros amigos con frases o imágenes positivas, las pizarras son 100% seguras el usuario puede configurar su perfil para elegir si algun amigo puede editar su pizarra y antes de publicar cualquier cosa se le notifica al usuario lo que sera publicado al igual que puede elegir una sola persona para editarlo o tenerlo privado.  
 			</article>
+		</section>
+		<section>
+			<article class="fondo-degra">CEO/FUNDADOR <img src="/public_html/images/zzzz/" alt=""></article>
+			<article  class="fondo-degra">CO-FUNDADOR <img src="/public_html/images/zzzz/emilioowo.png" width="100px" alt=""></article>
+			<article class="fondo-degra">DIRECTOR DE COMERCIAL <img src="/public_html/images/zzzz/" alt=""></article>
+			<article class="fondo-degra">DIRECTOR DE SOPORTE Y DESARROLLO <img src="/public_html/images/zzzz/" alt=""></article>
+			<article class="fondo-degra">DIRECTOR DE MARKETING <img src="/public_html/images/zzzz/Karlosowo.png" width="100px" alt=""></article>
+			<article class="fondo-degra">DIRECTOR DE FINANZAS <img src="/public_html/images/zzzz/" alt=""></article>
 		</section>
 		
 	 <div class="contenedor">
@@ -84,9 +103,9 @@
 		
 		<footer>
 			<a href="https://github.com/sr-script/innowo0"><i class="fa fa-github" style="font-size:36px;color:black"></i></a>
+			<a class="pata" id="cola" href="#">CONTACTANOS</a>
+			<img class="pata" src="/public_html/images/zzzz/phone-solid.svg" width="30px" alt="">
 			
-			<a id="cola" href="#">Colaboradores</a>
-
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script src="/public_html/JS/popup.js"></script>

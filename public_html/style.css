@@ -1,29 +1,3 @@
-#inicia{
-    text-decoration: overline;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-footer{
-    background-color: hsla(240, 5%, 63%, 0.466);
-    margin-top: auto;
-}
-*{
-    margin: 0px;
-    padding: 0px;
-}
-nav{
-	background-color: rgb(19, 19, 78);
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	transition: .3s ease all;
-	color: #BBBBBB;
-
-}
 
 .btn-bonitos{
 	background-color: #5E7DE3;
@@ -333,21 +307,77 @@ nav{
 }
 
 header{
-	background-color: #BBBBBB;
-	color: #fff;
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
 }
 #cola{
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	text-decoration: none;
-	float: right;
-	margin-right: 25px;
 }
 body{
-	background-color: #333336;
+	background-color: #d9dcdd;
 }
-body{
-	color: white;
-}
+
 #a{
 	text-align: center;
+}
+.fondo-degra{
+	background-image: linear-gradient(335deg, #0080f1 0, #007cf1 5.56%, #0077ef 11.11%, #2c71eb 16.67%, #5c6ae5 22.22%, #7a63dd 27.78%, #915bd4 33.33%, #a453c9 38.89%, #b44abd 44.44%, #c141b0 50%, #cc38a2 55.56%, #d43194 61.11%, #da2b85 66.67%, #de2776 72.22%, #df2868 77.78%, #df2c59 83.33%, #dd324b 88.89%, #da3a3d 94.44%, #d5422f 100%);;
+	margin: 20px;
+}
+article{
+	font-family: 'Bevan'
+}
+#inicia{
+    text-decoration: overline;
+}
+.btn-bonitos{
+	margin: 20px;
+}
+#logowo{
+	margin-left: 10px;
+}
+#innowo{
+	margin: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
+    background-color: hsla(0, 0%, 100%, 0.466);
+	
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	font-family: 'Bevan'
+}
+.pata{
+	float: right;
+	/* 
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-left: auto; */
+}
+.submenunav{
+	width: 20px;
+}
+.submenu{
+	text-decoration: none;
+	color: black;
+	margin: 3px;
+}
+ul{
+	list-style: none;
 }
