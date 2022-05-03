@@ -1,3 +1,46 @@
+<?php 
+session_start();
+
+  require 'database.php';
+
+  if (isset($_SESSION['user_id'])) {
+    $records = $conn->prepare('SELECT id, email, password, name, lastname, user FROM users WHERE id = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+      $user = $results;
+  }
+}
+?>
+<?php 
+
+require 'database.php';
+
+$message = '';
+
+if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['user'])) {
+	$sql = "INSERT INTO users (email, password, name, lastname, user) VALUES (:email, :password, :name, :lastname, :user)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindParam(':email',$_POST['email']);
+	$stmt->bindParam(':name',$_POST['name']);
+	$stmt->bindParam(':lastname',$_POST['lastname']);
+	$stmt->bindParam(':user',$_POST['user']);
+	$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+	$stmt->bindParam(':password',$password);
+
+	if ($stmt->execute()) {
+		$message = 'Tu cuenta ha sido creada exitosamente :D'; 
+	} else {
+		$message = 'Ha ocurrido un error, intenta registrarte mas tarde :c';
+	}
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
