@@ -20,10 +20,10 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<link  rel="icon"   href="images/zzzz/logoiinowo.svg" type="image/png" />
+	<link  rel="icon"   href="images/favicon.png" type="image/png" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
      <link rel="stylesheet" type="text/css" href="css/style.css" /> 
-	<title>Innowo</title>
+	<title>Inicio</title>
 </head>
 <body>
 	<header><h2>[Innowo]</h2></header>
@@ -43,17 +43,70 @@ session_start();
 	<div id="main">
 		<scroll-container>
 
-			<div class="box-footer">
-                            
-                      <textarea name="comentario" id="comentario" onkeypress="return validarn(event)" placeholder="Publica algo" class="form-control" cols="200" rows="3" required></textarea>
+			<!-- aqui empieza la cosa para publicar -->
+			<div class="box-footer">     
+			<form action="" method="post" enctype="multipart/form-data">             
+                      <textarea name="publicacion" id="publicacion" onkeypress="return validarn(event)" placeholder="Publica algo" class="form-control" cols="200" rows="3"></textarea>
             <button type="submit" name="publicar" class="btn btn-primary btn-flat">Publicar</button>
              
                       <input type="file" accept="image/*" name="foto" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" />
                       <label for="file-1">
                       	<i id="sube_foto">Sube una foto</i></label>
                
-                  
-                  </form>
+                  </div>
+      </form>
+
+                  <?php
+                   if(isset($_POST['publicar'])) 
+                  {
+                    $publicacion = mysql_real_escape_string($conn,s $_POST['publicacion']);
+
+                    $result = mysql_query("SHOW TABLE STATUS WHERE `Name` = 'publicaciones'");
+                    $data = mysql_fetch_assoc($result);
+                    $next_increment = $data['Auto_increment'];
+
+                    $alea = substr(strtoupper(md5(microtime(true))), 0,12);
+                    $code = $next_increment.$alea;
+
+                    $type = 'jpg';
+                    $rfoto = $_FILES['foto']['tmp_name'];
+                    $name = $code.".".$type;
+
+                    if(is_uploaded_file($rfoto))
+                    {
+                      $destino = "publicaciones/".$name;
+                      $nombre = $name;
+                      copy($rfoto, $destino);
+                    
+
+                    $llamar = mysql_num_rows(mysql_query("SELECT * FROM albumes WHERE usuario ='".$_SESSION['id']."' AND nombre = 'Publicaciones'"));
+
+                    if($llamar >= 1) {} else {
+
+                    $crearalbum = mysql_query("INSERT INTO albumes (usuario,fecha,nombre) values ('".$_SESSION['id']."',now(),'Publicaciones')");
+
+                   }
+
+                   $idalbum = mysql_query("SELECT * FROM albumes WHERE usuario ='".$_SESSION['id']."' AND nombre = 'Publicaciones'");
+                   $alb = mysql_fetch_array($idalbum);
+
+                    $subirimg = mysql_query("INSERT INTO fotos (usuario,fecha,ruta,album,publicacion) values ('".$_SESSION['id']."',now(),'$nombre','".$alb['id_alb']."','$next_increment')");
+
+                    $llamadoimg = mysql_query("SELECT id_fot FROM fotos WHERE usuario = '".$_SESSION['id']."' ORDER BY id_fot desc");
+                    $llaim = mysql_fetch_array($llamadoimg);
+
+                    }
+                    else
+                    {
+                      $nombre = '';
+                    }
+
+                    $subir = mysql_query("INSERT INTO publicaciones (usuario,fecha,contenido,imagen,album,comentarios) values ('".$_SESSION['id']."',now(),'$publicacion','".$llaim['id_fot']."','".$alb['id_alb']."','1')");
+
+                    if($subir) {echo '<script>window.location="inicio.php"</script>';}
+
+                  }      
+                  ?>     
                   
               </div>
 	<div id="main1">
