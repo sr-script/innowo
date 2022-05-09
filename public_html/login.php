@@ -3,7 +3,7 @@
 session_start();
 
   if (isset($_SESSION['user_id'])) {
-    header('Location: /innowo');
+    header('Location: /innowo_login_database');
   }
 
   require 'database.php';

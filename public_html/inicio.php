@@ -20,7 +20,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<link  rel="icon"   href="images/favicon.png" type="image/png" />
+	<link  rel="icon"   href="images/zzzz/logoiinowo.svg" type="image/png" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
      <link rel="stylesheet" type="text/css" href="css/style.css" /> 
 	<title>Innowo</title>

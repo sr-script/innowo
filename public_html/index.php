@@ -86,6 +86,27 @@ if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name
 				<li><img class="submenunav" src="/public_html//images/zzzz/newspaper-solid.svg" alt=""><a class="submenu" href="#">Releases</a></li>
 				<li><img class="submenunav" src="/public_html//images/zzzz/qrcode-solid.svg" alt=""><a class="submenu" href="#">Generar QR</a></li>
 			</ul>
+			<div class="contenedor">
+			   <div class="overlay" id="overlay">
+				   <div class="popup" id="popup">
+					   <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+					   <h3>Inicia Sesion</h3>
+					   <h4>y entra al futuro</h4>
+					   <form action="">
+						   <div class="contenedor-inputs">
+							   <form action="login.php" method="post">
+								   <input type="text" name="email" placeholder="Correo Electronico">
+								   <input type="password" name="password" placeholder="Contraseña">
+								   <input class="btn-submit" type="submit" name="Send" value="Ingresar">
+							   </form>
+						   </div>
+						   
+					   </form>
+				   </div>
+			   </div>
+			</div>
+			
+			
 		</nav>
 		<section>
 			<article class="fondo-degra">
@@ -105,47 +126,9 @@ if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name
 			<article class="fondo-degra">DIRECTOR DE FINANZAS <img src="/public_html/images/zzzz/" alt=""></article>
 		</section>
 		
-	 <div class="contenedor">
-		<div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>Inicia Sesion</h3>
-				<h4>y entra al futuro</h4>
-				<form action="">
-					<div class="contenedor-inputs">
-						<form action="login.php" method="post">
-							<input type="text" name="email" placeholder="Correo Electronico">
-							<input type="password" name="password" placeholder="Contraseña">
-							<input class="btn-submit" type="submit" name="Send" value="Ingresar">
-						</form>
-					</div>
-					
-				</form>
-			</div>
-		</div>
-	 </div>
-	 <div class="contenedorss">
-		<div class="overlayss" id="overlayss">
-			<div class="popupss" id="popupss">
-				<a href="#" id="btn-cerrar-popupss" class="btn-cerrar-popupss"><i class="fas fa-times"></i></a>
-				<h3>Registrate</h3>
-				<h4>para poder descubrir un nuevo mundo</h4>
-				<form action="">
-					<div class="contenedor-inputsss">
-						<form action="login.php" method="post">
-							<input type="text" name="email" placeholder="Correo Electronico">
-							<input type="password" name="password" placeholder="Contraseña">
-							<input class="btn-submit" type="submit" name="Send" value="Ingresar">
-						</form>
-					</div>
-					
-				</form>
-			</div>
-		</div>
-	 </div>
 		
 		<footer>
-			<a href="https://github.com/sr-script/innowo0"><i class="fa fa-github" style="font-size:36px;color:black"></i></a>
+			<a href="https://github.com/sr-script/innowo"><i class="fa fa-github" style="font-size:36px;color:black"></i></a>
 			<a class="pata" id="cola" href="#">CONTACTANOS</a>
 			<img class="pata" src="/public_html/images/zzzz/phone-solid.svg" width="30px" alt="">
 			

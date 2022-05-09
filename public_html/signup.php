@@ -50,7 +50,7 @@ if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name
 		<input type="submit" name="Send" value="Registrarme">
 	</form>
 	<br>
-	<span>Ó <a href="login.php">Inicia Sesión</a></span>
+	<span> <a href="login.php">Inicia Sesión</a></span>
 	<form action="index.html" method="post"></form>
 </div>
 </body>
